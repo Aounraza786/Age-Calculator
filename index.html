@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Age Calculator</h2>
+        
+        <div id="step1" class="step step-active">
+            <label for="dob-day">Enter Day:</label>
+            <input type="number" id="dob-day" name="dob-day" placeholder="Enter the date of the month" required min="1" max="31">
+            <button onclick="goToStep2()">Next</button>
+        </div>
+        
+        <div id="step2" class="step">
+            <label for="dob-month">Enter Month:</label>
+            <select id="dob-month" name="dob-month" required>
+                <option value="" disabled selected>Enter the month</option>
+                <option value="0">January</option>
+                <option value="1">February</option>
+                <option value="2">March</option>
+                <option value="3">April</option>
+                <option value="4">May</option>
+                <option value="5">June</option>
+                <option value="6">July</option>
+                <option value="7">August</option>
+                <option value="8">September</option>
+                <option value="9">October</option>
+                <option value="10">November</option>
+                <option value="11">December</option>
+            </select>
+            <button onclick="goToStep3()">Next</button>
+        </div>
+        
+        <div id="step3" class="step">
+            <label for="dob-year">Enter Year:</label>
+            <input type="number" id="dob-year" name="dob-year" placeholder="Enter the year" required min="1900">
+            <button onclick="calculateAge()">Calculate Age</button>
+        </div>
+        
+        <p id="result" class="step" style="display: none;"></p>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
+
